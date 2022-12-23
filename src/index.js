@@ -11,6 +11,18 @@ function updateTime() {
     );
   }
 
+  let johannesburgElement = document.querySelector("#johannesburg");
+  if (johannesburgElement) {
+    let johannesburgDateElement = johannesburgElement.querySelector(".date");
+    let johannesburgTimeElement = johannesburgElement.querySelector(".time");
+    let johannesburgTime = moment().tz("Africa/Johannesburg");
+
+    johannesburgDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    johannesburgTimeElement.innerHTML = johannesburgTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
   let newDelhiElement = document.querySelector("#new-delhi");
   if (newDelhiElement) {
     let newDelhiDateElement = newDelhiElement.querySelector(".date");
