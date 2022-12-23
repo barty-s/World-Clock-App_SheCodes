@@ -69,3 +69,6 @@ a:hover {
   color: #55758c;
   font-weight: bolder;
 }
+#weather {
+  text-align: center;
+}
